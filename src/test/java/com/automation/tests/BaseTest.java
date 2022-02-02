@@ -1,5 +1,7 @@
 package com.automation.tests;
 
+import com.automation.pages.HomePage;
+import com.automation.pages.LoginPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
@@ -7,6 +9,9 @@ import org.testng.annotations.BeforeMethod;
 
 public abstract class BaseTest {
     WebDriver driver;
+
+    LoginPage loginPage;
+    HomePage homePage;
 
     @BeforeMethod
     public void setUp(){
@@ -17,6 +22,9 @@ public abstract class BaseTest {
         // 1. To open url in browser
         driver.get("https://www.saucedemo.com/");
         driver.manage().window().maximize();
+
+        loginPage = new LoginPage(driver);
+        homePage = new HomePage(driver);
     }
 
     @AfterMethod

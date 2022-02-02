@@ -1,31 +1,17 @@
 package com.automation.tests;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import com.automation.pages.HomePage;
+import com.automation.pages.LoginPage;
 import org.testng.annotations.Test;
 
-public class LoginTest extends BaseTest{
+public class LoginTest extends BaseTest {
 
     @Test
-    public void verifyUserCanLogin(){
-        WebElement userNameEle = driver.findElement(By.id("user-name"));
-        WebElement passwordEle = driver.findElement(By.id("password"));
-        WebElement loginBtn = driver.findElement(By.id("login-button"));
+    public void verifyUserCanLogin() {
 
-        userNameEle.sendKeys("standard_user");
-        passwordEle.sendKeys("secret_sauce");
-        loginBtn.click();
+        loginPage.doLogin();
 
-        WebElement homePageLogo = driver.findElement(By.className("app_logo"));
-        WebElement homePageTitle = driver.findElement(By.cssSelector(".title"));
-
-        Assert.assertTrue(homePageLogo.isDisplayed(), "Logo is missing from homepage");
-        Assert.assertTrue(homePageTitle.isDisplayed(), "Title is missing from homepage");
+        homePage.verifyHomePage();
     }
 
 }
