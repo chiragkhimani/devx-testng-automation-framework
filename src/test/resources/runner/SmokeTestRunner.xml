@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Smoke Test" verbose="1" >
+    <test name="Login Test" >
+        <classes>
+            <class name="com.automation.tests.LoginTest" />
+        </classes>
+    </test>
+
+    <test name="Logout Test">
+        <classes>
+            <class name="com.automation.tests.LogoutTest"/>
+        </classes>
+    </test>
+</suite>
