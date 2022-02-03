@@ -1,10 +1,8 @@
 package com.automation.pages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+import com.automation.utils.PropertyReader;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
 public class LoginPage extends  BasePage{
@@ -19,8 +17,8 @@ public class LoginPage extends  BasePage{
     WebElement loginBtn;
 
     public void doLogin(){
-        userNameEle.sendKeys("standard_user");
-        passwordEle.sendKeys("secret_sauce");
+        userNameEle.sendKeys(PropertyReader.getProperty("login.username"));
+        passwordEle.sendKeys(PropertyReader.getProperty("login.password"));
         loginBtn.click();
     }
 
