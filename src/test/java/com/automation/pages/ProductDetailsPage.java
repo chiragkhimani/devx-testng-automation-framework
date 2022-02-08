@@ -18,7 +18,7 @@ public class ProductDetailsPage extends  BasePage{
     @FindBy(xpath="//a[@class='shopping_cart_link']")
     WebElement cartLink;
 
-    public void verifyProductDetailPage() {
+    public void verifyPage() {
         Assert.assertTrue(productTitle.isDisplayed(), "Product Title is missing from pdp page");
         Assert.assertTrue(productImage.isDisplayed(), "Product Image is missing from pdp page");
         Assert.assertEquals(addToCartBtn.isDisplayed(), true, "Add to Cart button is missing from pdp page");

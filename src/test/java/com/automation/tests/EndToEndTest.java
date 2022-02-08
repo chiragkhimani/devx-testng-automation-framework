@@ -7,19 +7,19 @@ public class EndToEndTest extends BaseTest {
     @Test
     public void verifyUserCanPlaceOrder() {
         loginPage.doLogin();
-        homePage.verifyHomePage();
+        homePage.verifyPage();
         homePage.clickOnItem();
-        productDetailsPage.verifyProductDetailPage();
+        productDetailsPage.verifyPage();
         productDetailsPage.clickOnAddToCartBtn();
         productDetailsPage.clickOnCartIcon();
-        cartPage.verifyCartPage();
+        cartPage.verifyPage();
         cartPage.clickOnCheckoutBtn();
-        checkoutPage.verifyCheckoutPage();
+        checkoutPage.verifyPage();
         checkoutPage.fillCheckOutDetails();
         checkoutPage.clickOnContinueBtn();
-        reviewPage.verifyReviewPage();
+        reviewPage.verifyPage();
         reviewPage.clickOnFinishBtn();
-        orderConfirmationPage.verifyOrderConfirmationPage();
+        orderConfirmationPage.verifyPage();
     }
 
 

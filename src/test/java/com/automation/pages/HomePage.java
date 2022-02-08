@@ -22,7 +22,7 @@ public class HomePage extends BasePage{
     @FindBy(xpath = "//div[text()='Sauce Labs Backpack']")
     WebElement itemLink;
 
-    public void verifyHomePage(){
+    public void verifyPage(){
         Assert.assertTrue(homePageLogo.isDisplayed(), "Logo is missing from homepage");
         Assert.assertTrue(homePageTitle.isDisplayed(), "Title is missing from homepage");
     }

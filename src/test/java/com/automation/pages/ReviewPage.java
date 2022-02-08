@@ -16,7 +16,7 @@ public class ReviewPage extends  BasePage{
     WebElement finishBtn;
 
 
-    public void verifyReviewPage() {
+    public void verifyPage() {
         Assert.assertTrue(paymentInfo.isDisplayed(), "Payment info is missing from review page");
         Assert.assertTrue(itemName.isDisplayed(), "item name is missing from cart review page");
         Assert.assertEquals(finishBtn.isDisplayed(), true, "Finish button is missing from review page");

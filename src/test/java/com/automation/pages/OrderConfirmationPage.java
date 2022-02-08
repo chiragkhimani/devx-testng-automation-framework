@@ -10,7 +10,7 @@ public class OrderConfirmationPage extends  BasePage{
     @FindBy(xpath = "//h2[@class='complete-header']")
     WebElement orderConfirmationTitle;
 
-    public void verifyOrderConfirmationPage() {
+    public void verifyPage() {
         Assert.assertTrue(orderConfirmationTitle.isDisplayed(), "Order confirmation title is missing from order confirmation page");
         String actText = orderConfirmationTitle.getText();
         String expText = PropertyReader.getProperty("order.confirmation.title");

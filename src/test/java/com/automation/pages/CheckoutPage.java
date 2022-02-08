@@ -29,7 +29,7 @@ public class CheckoutPage extends  BasePage{
         continueBtn.click();
     }
 
-    public void verifyCheckoutPage() {
+    public void verifyPage() {
         Assert.assertTrue(firstName.isDisplayed(), "First name is missing from checkout page");
         Assert.assertTrue(lastName.isDisplayed(), "last name is missing from cart checkout page");
         Assert.assertEquals(zipCode.isDisplayed(), true, "Zip code is missing from checkout page");

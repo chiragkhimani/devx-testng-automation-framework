@@ -22,7 +22,7 @@ public class LoginPage extends  BasePage{
         loginBtn.click();
     }
 
-    public void verifyLoginPage(){
+    public void verifyPage(){
         Assert.assertTrue(userNameEle.isDisplayed(), "Username input is missing from login page");
         Assert.assertTrue(passwordEle.isDisplayed(), "Password input is missing from login page");
     }
