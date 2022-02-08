@@ -4,7 +4,6 @@ import org.testng.annotations.Test;
 
 public class EndToEndTest extends BaseTest {
 
-
     @Test
     public void verifyUserCanPlaceOrder() {
         loginPage.doLogin();
