@@ -1,5 +1,6 @@
 package com.automation.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
@@ -18,6 +19,9 @@ public class HomePage extends BasePage{
     @FindBy(id = "logout_sidebar_link")
     WebElement logoutLink;
 
+    @FindBy(xpath = "//div[text()='Sauce Labs Backpack']")
+    WebElement itemLink;
+
     public void verifyHomePage(){
         Assert.assertTrue(homePageLogo.isDisplayed(), "Logo is missing from homepage");
         Assert.assertTrue(homePageTitle.isDisplayed(), "Title is missing from homepage");
@@ -29,5 +33,9 @@ public class HomePage extends BasePage{
 
     public void clickOnLogoutLink(){
         logoutLink.click();
+    }
+
+    public void clickOnItem() {
+        itemLink.click();
     }
 }
