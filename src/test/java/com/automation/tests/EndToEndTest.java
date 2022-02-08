@@ -4,6 +4,7 @@ import org.testng.annotations.Test;
 
 public class EndToEndTest extends BaseTest {
 
+
     @Test
     public void verifyUserCanPlaceOrder() {
         loginPage.doLogin();
@@ -14,6 +15,7 @@ public class EndToEndTest extends BaseTest {
         productDetailsPage.clickOnCartIcon();
         cartPage.verifyCartPage();
         cartPage.clickOnCheckoutBtn();
+        checkoutPage.verifyCheckoutPage();
         checkoutPage.fillCheckOutDetails();
         checkoutPage.clickOnContinueBtn();
         reviewPage.verifyReviewPage();
