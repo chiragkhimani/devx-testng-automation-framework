@@ -1,5 +1,6 @@
 package com.automation.pages;
 
+import com.automation.utils.DriverUtils;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
@@ -24,5 +25,6 @@ public class ReviewPage extends  BasePage{
 
     public void clickOnFinishBtn() {
         finishBtn.click();
+        driver.navigate().refresh();
     }
 }

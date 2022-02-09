@@ -11,7 +11,7 @@ public abstract class BasePage {
     public abstract void verifyPage();
 
     BasePage(){
-        this.driver = DriverUtils.getDriver();
+        driver = DriverUtils.getDriver();
         PageFactory.initElements(driver, this);
     }
 
